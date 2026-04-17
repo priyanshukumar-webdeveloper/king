@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Sureshot</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(270deg, #001f1f, #000, #002f2f);
+    background-size: 600% 600%;
+    animation: bgMove 10s infinite alternate;
+    color: white;
+}
+
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* CARD */
+.card {
+    width: 100%;
+    max-width: 330px;
+    padding: 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(0,255,200,0.05);
+    border: 1px solid rgba(0,255,200,0.4);
+    text-align: center;
+}
+
+/* TAG */
+.tag {
+    background: #00ffd5;
+    color: black;
+    padding: 6px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 5px 0px 5px;
+    font-weight: bold;
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+/* TITLE */
+.title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* SUBTEXT */
+.sub {
+    color: #b2ffff;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.btn {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    background: #00ffd5;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 15px #00ffd5;
+}
+
+/* TIMER */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.box {
+    background: #012f2f;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 60px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* COUNTER */
+.counter {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #00ffd5;
+    font-weight: bold;
+}
+
+/* FEATURES */
+.features {
+    text-align: left;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.features p {
+    margin: 5px 0;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #00ffd5;
+    font-weight: bold;
+}
+
+/* MOBILE EXTRA */
+@media (max-width: 400px) {
+    .title {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="tag">🔥 LIMITED VIP ACCESS</div>
+
+    <a href="https://t.me/+H4BWY4xiFWoxYzdl"><img src="tg.jpeg" alt=""></a>
+
+    <div class="title">⭐ONLY NUMBER PREDICTION⭐</div>
+    <div class="sub">Join fast & start earning today</div>
+
+    <a href="https://t.me/+H4BWY4xiFWoxYzdl" class="btn">JOIN NOW</a>
+
+    <div class="timer">
+        <div class="box">
+            <div id="min">30</div>
+            <small>MIN</small>
+        </div>
+        <div class="box">
+            <div id="sec">00</div>
+            <small>SEC</small>
+        </div>
+    </div>
+
+    <div class="counter" id="joinCounter">
+        1308 People Joined Today
+    </div>
+
+    <div class="features">
+        <p>⭐ 100% Winning Signal</p>
+        <p>⭐ Loss Recovery System</p>
+        <p>⭐ Daily Profit Guarantee</p>
+        <p>⭐Free Number Prediction Panel</p>
+    </div>
+
+<br>
+
+    <div class="footer">
+        5+ Years Experience | 10 Lakh+ Profit
+    </div>
+
+</div>
+
+<script>
+// TIMER
+let total = 1800;
+setInterval(() => {
+    let m = Math.floor(total/60);
+    let s = total%60;
+    document.getElementById("min").innerText = m;
+    document.getElementById("sec").innerText = s;
+    if(total>0) total--;
+},1000);
+
+// COUNTER
+let count = 1308;
+setInterval(() => {
+    count += Math.floor(Math.random()*2);
+    document.getElementById("joinCounter").innerText =
+        count + " People Joined Today";
+},3000);
+</script>
+
+</body>
+</html>
